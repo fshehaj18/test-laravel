@@ -1,27 +1,64 @@
-@extends('layouts.app')
+<x-home-master>
+  @section('content')
+    <h1>Home</h1>
 
-@section('content')
-<main class="sm:container sm:mx-auto sm:mt-10">
-    <div class="w-full sm:px-6">
+    <h1 class="my-4">Page Heading
+          <small>Secondary Text</small>
+        </h1>
 
-        @if (session('status'))
-            <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Post Title</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
 
-        <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Post Title</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
 
-            <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                Dashboard
-            </header>
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Post Title</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
 
-            <div class="w-full p-6">
-                <p class="text-gray-700">
-                    You are logged in!
-                </p>
-            </div>
-        </section>
-    </div>
-</main>
-@endsection
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+          <li class="page-item">
+            <a class="page-link" href="#">&larr; Older</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Newer &rarr;</a>
+          </li>
+        </ul>
+        
+@endsection  
+</x-home-master>
+
+
